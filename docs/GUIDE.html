@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>راهنمای خیلی ساده — اپ سیگنال</title>
+<style>
+  :root{--bg:#0b1220;--card:#111d33;--line:#26375a;--txt:#e8f0ff;--dim:#a9bcdd;--ok:#16d6a4;--btn:#2a6df4}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.9 Tahoma,Arial,sans-serif;padding:18px;max-width:760px;margin-inline:auto}
+  h1{font-size:24px;margin:0 0 6px}
+  .sub{color:var(--dim);font-size:14px;margin-bottom:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0}
+  .n{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#fff;align-items:center;justify-content:center;font-weight:bold;margin-left:8px}
+  .step{font-weight:bold;font-size:18px;margin-bottom:6px}
+  code{background:#0a1426;color:#9ee6ff;padding:2px 7px;border-radius:6px;direction:ltr;display:inline-block;font-family:monospace}
+  a{color:#7fb0ff}
+  .big{background:#102a22;border:1px solid var(--ok);border-radius:12px;padding:14px;margin:16px 0;font-weight:bold}
+  button{background:var(--btn);color:#fff;border:0;border-radius:9px;padding:9px 14px;font:inherit;cursor:pointer;margin:4px 0}
+  input{background:#0a1426;color:var(--txt);border:1px solid var(--line);border-radius:9px;padding:9px 12px;font:inherit;direction:ltr;text-align:left;min-width:220px}
+  .url{color:var(--ok);word-break:break-all;direction:ltr;text-align:left;font-family:monospace;font-size:14px}
+  .note{color:var(--dim);font-size:14px;border-right:3px solid var(--line);padding-right:10px;margin:10px 0}
+  label{display:block;margin:8px 0;cursor:pointer}
+  .done{opacity:.55;text-decoration:line-through}
+  footer{color:var(--dim);font-size:13px;margin-top:26px;text-align:center}
+</style>
+</head>
+<body>
+<h1>راهنمای خیلی ساده ✅</h1>
+<div class="sub">من بلد نیستم → پس فقط از بالا به پایین برو. لازم نیست چیزی نصب کنی، فقط مرورگر.</div>
+
+<div class="big">اول از همه: فایل <code>repo.zip</code> رو دانلود کن و بازش کن «Extract / Unzip». بقیهش از همین پوشه میاد.</div>
+
+<div class="card">
+  <div class="step"><span class="n">۱</span> اکانت گیتهاب «اگه داری، رد شو»</div>
+  <div>برو <a href="https://github.com/signup" target="_blank">github.com/signup</a> → ایمیل، رمز، یه اسم کاربری. رایگانه.</div>
+  <label><input type="checkbox" data-k="s1"> ساختم / داشتم</label>
+</div>
+
+<div class="card">
+  <div class="step"><span class="n">۲</span> یه ریپوی تازه بساز</div>
+  <div>برو <a href="https://github.com/new" target="_blank">github.com/new</a> و دقیقاً اینجوری پر کن:</div>
+  <div style="margin:10px 0">اسم ریپو: <code>signal-engine-app</code> <button onclick="cp('signal-engine-app',this)">کپی</button></div>
+  <div>✅ بزن <b>Public</b> «بخش خصوصی نباشه»</div>
+  <div>دکمهٔ <b>Create repository</b> رو بزن.</div>
+  <label><input type="checkbox" data-k="s2"> ساختم</label>
+</div>
+
+<div class="card">
+  <div class="step"><span class="n">۳</span> فایلها رو بریز داخل ریپو</div>
+  <div>توی صفحهٔ ریپو: <b>Add file</b> → <b>Upload files</b>.</div>
+  <div>پوشهٔ بازشدهٔ <code>repo</code> رو باز کن، <b>همهٔ محتویاتش</b> رو بکش تو کادر آپلود «خود پوشه رو نکش؛ داخلش رو بکش».</div>
+  <div class="note">یه پوشهٔ نقطهدار هم هست به اسم <code>.github</code>. اگه توی ویندوز/مک نمیبینیش، «نمایش فایلهای مخفی» رو روشن کن و اون رو هم حتماً بکش داخل. اون زنگ ۵ دقیقهایه.</div>
+  <div>پایین صفحه دکمهٔ <b>Commit changes</b> رو بزن.</div>
+  <label><input type="checkbox" data-k="s3"> آپلود کردم</label>
+</div>
+
+<div class="card">
+  <div class="step"><span class="n">۴</span>Pages رو روشن کن</div>
+  <div>توی ریپو: <b>Settings</b> → از منوی چپ <b>Pages</b>.</div>
+  <div>جلوی <b>Source</b> بزن <b>Deploy from a branch</b>.</div>
+  <div>Branch: <code>main</code> | Folder: <code>/docs</code> <button onclick="cp('/docs',this)">کپی</button></div>
+  <div><b>Save</b> رو بزن. یکی دو دقیقه صبر کن.</div>
+  <label><input type="checkbox" data-k="s4"> ذخیره کردم</label>
+</div>
+
+<div class="card">
+  <div class="step"><span class="n">۵</span> آدرس اپت رو پیدا کن</div>
+  <div>اسم کاربریت رو بنویس، آدرس خودش ساخته میشه:</div>
+  <div style="margin:10px 0"><input id="u" placeholder="مثلاً ali1370" oninput="make()"></div>
+  <div class="url" id="out">https://نامکاربری.github.io/signal-engine-app/</div>
+  <button onclick="cp(document.getElementById('out').textContent,this)">کپی آدرس</button>
+  <div class="note">اگه Pages هنوز «Visit site» نداد، ۱–۲ دقیقه دیگه رفرش کن.</div>
+</div>
+
+<div class="card">
+  <div class="step"><span class="n">۶</span> روی گوشی اندروید نصب کن</div>
+  <div>همون آدرس بالا رو تو <b>Chrome گوشی</b> باز کن.</div>
+  <div>منوی «⋮» → <b>افزودن به صفحهٔ اصلی / Install app</b>.</div>
+  <div>اپ رو باز کن → دکمهٔ <b>🔔 اجازهٔ اعلان</b> → <b>Allow / اجازه</b>.</div>
+  <label><input type="checkbox" data-k="s6"> نصب کردم و اجازه دادم</label>
+</div>
+
+<div class="big">تمام ✅ از این به بعد زنگ ساعت هر ۵ دقیقه فایل رو تازه میکند و اپ خودش سر میزند.</div>
+
+<div class="note">من توی این محیط نمیتونم مستقیم به گیتهاب پوش کنم؛ ولی همهٔ فایلها کامل و تستشده تو <code>repo.zip</code> هست. اگه گیر کردی، فقط بگو «مرحلهٔ ۳ گیر کردم» یا یه عکس بفرست.</div>
+
+<footer>فایل فنی: <code>repo/README.md</code> · خلاصه: <code>STEP3.md</code></footer>
+
+<script>
+function cp(t,b){
+  try{ if(navigator.clipboard) navigator.clipboard.writeText(t); }catch(e){}
+  const old=b.textContent; b.textContent='کپی شد ✓'; setTimeout(()=>b.textContent=old,1200);
+}
+function make(){const u=document.getElementById('u').value.trim();document.getElementById('out').textContent=u?'https://'+u+'.github.io/signal-engine-app/':'https://نامکاربری.github.io/signal-engine-app/'}
+document.querySelectorAll('input[type=checkbox]').forEach(c=>{
+  const k='guide_'+c.dataset.k;
+  if(localStorage.getItem(k)==='1'){c.checked=true;c.parentElement.classList.add('done')}
+  c.onchange=()=>{localStorage.setItem(k,c.checked?'1':'0');c.parentElement.classList.toggle('done',c.checked)}
+})
+</script>
+</body>
+</html>

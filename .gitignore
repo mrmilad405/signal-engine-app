@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.venv/
+work/snapshot.json
+.DS_Store

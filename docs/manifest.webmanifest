@@ -1,0 +1,27 @@
+{
+  "name": "موتور سیگنال",
+  "short_name": "سیگنال",
+  "description": "نمای پنجرهای سیگنالهای زنده رمزارز، بدون تغییر موتور",
+  "start_url": "./?win=signals",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080c17",
+  "theme_color": "#0d1424",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
