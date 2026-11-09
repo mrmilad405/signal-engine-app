@@ -1,9 +1,14 @@
 name: Scan and publish live snapshot
 
+# touch: re-register the free 5-minute clock
+
 on:
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/scan.yml']
 
 permissions:
   contents: write
